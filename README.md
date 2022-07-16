@@ -32,10 +32,7 @@ ANALYSIS:
 6. User can buy multiple items at the same time
 9. Admin can reach and adminastrate users, merchants, and trades 
 
-```
-cd kodluyoruzilkrepo
-code .
-```
+
 
 ## Contributing 
 
