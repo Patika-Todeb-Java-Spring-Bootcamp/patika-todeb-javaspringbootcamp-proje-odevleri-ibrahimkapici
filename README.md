@@ -1,11 +1,11 @@
 # Used Staff Sale Application
 ## Case Diagram
 * 
-![Github](https://github.com/Kodluyoruz/taskforce/blob/main/git/odev1/figures/github.png)
+![Github](https://github.com/Patika-Todeb-Java-Spring-Bootcamp/patika-todeb-javaspringbootcamp-proje-odevleri-ibrahimkapici/blob/main/Screen%20Shot%202022-07-16%20at%2005.30.42.png)
 
 ## Installation 
 
-Öncelikle projeyi clonelayın(Buraya sizin reponuzdan aldığınız ilk link gelecek)
+https://github.com/Patika-Todeb-Java-Spring-Bootcamp/patika-todeb-javaspringbootcamp-proje-odevleri-ibrahimkapici
 
 ```
 git clone https://github.com/ibrahimkapici/kodluyoruzilkrepo.git
