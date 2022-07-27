@@ -35,17 +35,17 @@ public class CategoryService {
         getById(id);
         categoryRepository.deleteById(id);
     }
-    public Category update(String name, CategoryDTO category){
-        Optional<Category> categoryByName = categoryRepository.findCategoryByName(name);
-        if(!categoryByName.isPresent())
-            return null;
-        Category updatedCategory = categoryByName.get();
-        if(!StringUtils.isEmpty(category.getName())){
-            updatedCategory.setName(category.getName());
-        }
-        if(!StringUtils.isEmpty(category.getId())){
-            updatedCategory.setId(category.getId());
-        }
-        return categoryRepository.save(updatedCategory);
-    }
+//    public Category update(String name, CategoryDTO category){
+//        Optional<Category> categoryByName = categoryRepository.findCategoryByName(name);
+//        if(!categoryByName.isPresent())
+//            return null;
+//        Category updatedCategory = categoryByName.get();
+//        if(!StringUtils.isEmpty(category.getName())){
+//            updatedCategory.setName(category.getName());
+//        }
+//        if(!StringUtils.isEmpty(category.getId())){
+//            updatedCategory.setId(category.getId());
+//        }
+//        return categoryRepository.save(updatedCategory);
+//    }
 }

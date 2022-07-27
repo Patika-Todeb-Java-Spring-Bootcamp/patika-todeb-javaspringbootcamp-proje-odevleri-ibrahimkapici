@@ -17,15 +17,18 @@ public class CategoryController {
     @Autowired
     private CategoryService categoryService;
 
+    //Get all categories
     @GetMapping("/all")
     public List<Category> getAllCategories(){
         return categoryService.getAllCategories();
     }
+    //Create category
     @PostMapping("/create")
     public Category create(@RequestBody CategoryDTO categoryDTO){
         return categoryService.create(categoryDTO);
     }
 
+    //Delete category additionally -> Request para = /categories?id=1
     @DeleteMapping
     public ResponseEntity delete(@RequestParam(name = "id") Long id){
         try {
@@ -36,16 +39,16 @@ public class CategoryController {
         return ResponseEntity.status(HttpStatus.OK).body("Related Category was deleted successfully");
     }
 
-    public ResponseEntity updateCategory(
-            @PathVariable String name,
-            @RequestBody CategoryDTO category) {
-        Category update = categoryService.update(name, category);
-        if (update == null) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body("Category update failed");
-        }
-        return ResponseEntity.status(HttpStatus.OK).body(update);
-    }
+//    public ResponseEntity updateCategory(
+//            @PathVariable String name,
+//            @RequestBody CategoryDTO category) {
+//        Category update = categoryService.update(name, category);
+//        if (update == null) {
+//            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+//                    .body("Category update failed");
+//        }
+//        return ResponseEntity.status(HttpStatus.OK).body(update);
+//    }
 
 }
 
