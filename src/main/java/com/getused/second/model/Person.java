@@ -1,10 +1,14 @@
 package com.getused.second.model;
 import lombok.Data;
+
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 //import javax.persistence.Inheritance;
 //import javax.persistence.InheritanceType;
 
 @Data
-public class User {
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+public abstract class Person {
     private String name;
     private String surname;
     private String email;

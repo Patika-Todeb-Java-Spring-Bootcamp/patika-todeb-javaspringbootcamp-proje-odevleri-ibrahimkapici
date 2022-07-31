@@ -17,20 +17,23 @@ import java.util.Optional;
 public class CategoryService {
     private final CategoryRepository categoryRepository;
 
+    //list all categories
     public List<Category> getAllCategories(){
         List<Category> allCategories = categoryRepository.findAll();
         return allCategories;
     }
-
+    //get categories by Id
     public Category getById(Long id){
         Optional<Category> byId = categoryRepository.findById(id);
         return byId.orElseThrow(()-> new RuntimeException("Category not found"));
     }
-
+    //create category
     public Category create(CategoryDTO categoryDTO){
         Category category = CategoryMapper.toEntity(categoryDTO);
         return categoryRepository.save(category);
     }
+
+    //delete category
     public void delete(long id){
         getById(id);
         categoryRepository.deleteById(id);

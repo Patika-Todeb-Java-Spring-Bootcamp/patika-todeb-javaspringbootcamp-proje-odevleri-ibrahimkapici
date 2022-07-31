@@ -1,11 +1,10 @@
 package com.getused.second.model.entity;
 
-import com.getused.second.model.User;
-import com.getused.second.model.entity.Stash;
+import com.getused.second.model.Person;
 import lombok.Data;
 
 @Data
-public class UserProfile extends User {
+public class PersonProfile extends Person {
 
     private String comments;
     private String location;
