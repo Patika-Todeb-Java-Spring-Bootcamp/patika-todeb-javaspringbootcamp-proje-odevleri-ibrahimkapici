@@ -2,12 +2,9 @@ package com.getused.second.model.entity;
 
 import lombok.Data;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
-
+@Entity
 @Data
 @Table(name = "product")
 public class Product {
@@ -17,5 +14,8 @@ public class Product {
     private String name;
     private String description;
     private double price;
-    private String category;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn()
+    private Category category;
 }

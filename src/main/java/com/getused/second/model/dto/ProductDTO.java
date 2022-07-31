@@ -1,5 +1,6 @@
 package com.getused.second.model.dto;
 
+import com.getused.second.model.entity.Category;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,5 +11,6 @@ public class ProductDTO {
     private String name;
     private String description;
     private double price;
-    private String category;
+    private Category category;
+
 }
