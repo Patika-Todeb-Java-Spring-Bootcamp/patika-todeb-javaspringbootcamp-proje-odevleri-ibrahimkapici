@@ -23,4 +23,5 @@ public class Stash {
     @JoinColumn(name = "stash_id")
     private List<Product> productList;
 
+    private Product product;
 }
