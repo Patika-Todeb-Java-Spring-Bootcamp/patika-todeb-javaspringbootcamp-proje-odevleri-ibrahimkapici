@@ -35,7 +35,6 @@ public class StashService {
         return aStashDTO()
                 .id(stash.getId())
                 .productList(stash.getProductList())
-                .product(stash.getProduct())
                 .build();
     }
 
